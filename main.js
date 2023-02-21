@@ -10,7 +10,7 @@ let endCode = rawCode.toString().indexOf("&")
 
 let code = rawCode.slice(startCode , endCode)
 
-if(!code + "/" == url){
+if(code != "https://" + window.location.hostname){
     codeBody.textContent += code
 }else{
     codeBody.textContent = "код необнаружен "
